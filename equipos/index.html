@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Balanceador de Equipos</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div id="app-container">
+        <h1>Registro de Jugadores</h1>
+
+        <div>
+            <label for="numJugadoresTotal">Total de Jugadores en Partido:</label>
+            <select id="numJugadoresTotal"></select>
+        </div>
+
+        <div>
+            <label for="nombre">Nombre del Jugador:</label>
+            <input type="text" id="nombre">
+        </div>
+        <div>
+            <input type="checkbox" id="esArquero">
+            <label for="esArquero">Es Arquero?</label>
+        </div>
+
+        <div id="contenedorAtajada" style="display: none;"> 
+            <label for="atajadas">Skill como golkeper (1-10):</label>
+            <select id="atajadas"></select>
+        </div>
+
+        <div id="atributosCampo">
+            <div>
+                <label for="defensa">Defensa :</label>
+                <select id="defensa"></select>
+            </div>
+
+            <div>
+                <label for="pase">Pase :</label>
+                <select id="pase"></select>
+            </div>
+
+            <div>
+                <label for="regate">Regate :</label>
+                <select id="regate"></select>
+            </div>
+
+            <div>
+                <label for="tiro">Tiro :</label>
+                <select id="tiro"></select>
+            </div>
+
+            <div>
+                <label for="velocidad">Velocidad :</label>
+                <select id="velocidad"></select>
+            </div>
+
+            <div>
+                <label for="resistencia">Resistencia :</label>
+                <select id="resistencia"></select>
+            </div>
+        </div>
+        <button id="btnAgregar">Agregar Jugador</button>
+        <button id="btnBalancear">Balancear Equipos</button>
+
+        <div id="listaPendientes" class="lista-jugadores">
+            <h3>📝 Jugadores Pendientes de Balanceo</h3> 
+            <p>Total: <span id="contadorJugadores">0</span></p>
+            <ul id="ulJugadores"> 
+                </ul>
+        </div>
+
+        <section id="resultados">
+            <h2>Resultados del Balanceo</h2>
+            <div style="display: flex; gap: 20px;">
+                <div id="equipoA" style="flex: 1; border: 1px solid blue; padding: 10px;">
+                    <h3>🔵 Equipo A</h3>
+                </div>
+                <div id="equipoB" style="flex: 1; border: 1px solid red; padding: 10px;">
+                    <h3>🔴 Equipo B</h3>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

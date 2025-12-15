@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+#app-container {
+    width: 100%;
+    max-width: 800px; /* Limita el ancho en pantallas grandes */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+/* Estilos para cada grupo de label/input/select */
+#app-container > div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    width: 150px; /* Ancho fijo para las etiquetas */
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+input[type="text"], select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    flex-grow: 1; /* Permite que los campos se expandan */
+    max-width: 250px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#btnAgregar {
+    background-color: #28a745;
+    color: white;
+}
+
+#btnAgregar:hover {
+    background-color: #218838;
+}
+
+#btnBalancear {
+    background-color: #007bff;
+    color: white;
+}
+
+#btnBalancear:hover {
+    background-color: #0056b3;
+}
+
+#resultados {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+}
+
+#resultados h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#equipoA, #equipoB {
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 150px;
+}
+
+#equipoA {
+    border-color: #007bff !important; /* Azul */
+    background-color: #e6f7ff;
+}
+
+#equipoB {
+    border-color: #dc3545 !important; /* Rojo */
+    background-color: #fff0f0;
+}
+
+#equipoA h3 { color: #007bff; }
+#equipoB h3 { color: #dc3545; }
+
+#resultados ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#resultados li {
+    background-color: #fff;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border-left: 3px solid #ccc;
+}
+
+.combo-deshabilitado {
+    opacity: 0.5;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    cursor: not-allowed; 
+}
+
+/* Estilos para la lista de jugadores pendientes */
+#listaPendientes {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    
+    /* ¡SOLUCIÓN CLAVE! Asegura que los hijos se apilen de arriba a abajo (flujo normal) */
+    display: block !important; 
+    width: 100%; 
+    box-sizing: border-box; 
+    clear: both;
+}
+
+/* 2. Encabezado (El punto crítico) */
+#listaPendientes h3 {
+    margin-top: 0;
+    margin-bottom: 5px; /* Reducimos el margen */
+    color: #444;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* 3. Estilo de la Lista */
+#listaPendientes ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; /* Quitamos el margen superior para que empiece justo debajo del P */
+    clear: both; 
+    display: block; 
+    width: 100%;
+}
+/* 4. Estilo de cada Jugador */
+#listaPendientes li {
+    font-size: 1em;
+    padding: 8px 0;
+    border-bottom: 1px dotted #ddd;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+/* Opcional: Elimina la línea divisoria del último elemento */
+#listaPendientes li:last-child {
+    border-bottom: none;
+}
+
+#listaPendientes p {
+    margin: 5px 0 10px 0; /* Añadimos más margen abajo para separar de la lista */
+    font-weight: bold;
+    color: #666;
+    display: block; 
+    width: 100%; 
+    clear: both;
+}
+#app-container > div:first-of-type {
+    padding: 10px;
+    border: 1px dashed #007bff;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
